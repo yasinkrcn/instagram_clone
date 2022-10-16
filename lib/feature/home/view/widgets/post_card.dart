@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:instagram_clone/core/constants/assets_paths.dart';
+import 'package:instagram_clone/core/utils/screen_size.dart';
 
 class PostCard extends StatelessWidget {
   const PostCard({
@@ -18,8 +19,8 @@ class PostCard extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
-                CircleAvatar(
+              children:  [
+                const CircleAvatar(
                   radius: 19,
                   backgroundColor: Colors.red,
                   child: CircleAvatar(
@@ -30,11 +31,11 @@ class PostCard extends StatelessWidget {
                     ),
                   ),
                 ),
-                Text('data'),
+                const Text('data'),
                 SizedBox(
-                  width: 250,
+                  width: ScreenSize().getWidthPercent(.65),
                 ),
-                Icon(Icons.more_vert_rounded)
+                const Icon(Icons.more_vert_rounded)
               ],
             ),
           ),
@@ -61,8 +62,8 @@ class PostCard extends StatelessWidget {
                   SvgPicture.asset(AssetsPath().heartSVG),
                   SvgPicture.asset(AssetsPath().commentSVG),
                   SvgPicture.asset(AssetsPath().sendSVG),
-                  const SizedBox(
-                    width: 190,
+                   SizedBox(
+                    width: ScreenSize().getWidthPercent(.52),
                   ),
                   SvgPicture.asset(AssetsPath().saveSVG),
                 ],

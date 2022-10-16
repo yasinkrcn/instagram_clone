@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:instagram_clone/core/constants/assets_paths.dart';
 import 'package:instagram_clone/core/utils/screen_size.dart';
+import 'package:instagram_clone/feature/auth/view/widgets/app_button.dart';
 
 class StartPage extends StatelessWidget {
   const StartPage({super.key});
@@ -34,20 +35,8 @@ class StartPage extends StatelessWidget {
             const SizedBox(
               height: 36,
             ),
-            Container(
-              height: 55,
-              width: ScreenSize().getWidthPercent(.9),
-              decoration: BoxDecoration(
-                  color: Colors.blue, borderRadius: BorderRadius.circular(10)),
-              child: const Center(
-                child: Text(
-                  'Create new account',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold),
-                ),
-              ),
+            const AppButton(
+              text: 'Create new account'
             ),
             const SizedBox(
               height: 24,

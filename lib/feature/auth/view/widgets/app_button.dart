@@ -8,10 +8,10 @@ class AppButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 52,
+      height: 48,
       width: ScreenSize().getWidthPercent(.9),
       decoration: BoxDecoration(
-          color: Colors.blue, borderRadius: BorderRadius.circular(10)),
+          color: Colors.blue, borderRadius: BorderRadius.circular(8)),
       child: Center(
         child: Text(
           text,

@@ -18,4 +18,9 @@ class AssetsPath {
   final String searchSVG = 'assets/svg/search.svg';
   final String sendSVG = 'assets/svg/send.svg';
   final String shoppingSVG = 'assets/svg/shopping.svg';
+  final String menuhamburgerSVG = 'assets/svg/menu_hamburger.svg';
+  final String profile1SVG = 'assets/svg/profile1.svg';
+  final String profile2SVG = 'assets/svg/profile2.svg';
+  final String obscureSVG = 'assets/svg/obscure.svg';
+  final String facebookSVG = 'assets/svg/facebook_logo.svg';
 }

@@ -5,6 +5,7 @@ import 'package:instagram_clone/feature/auth/view/pages/create_account.dart';
 import 'package:instagram_clone/feature/auth/view/pages/login_page.dart';
 import 'package:instagram_clone/feature/auth/view/pages/start_page.dart';
 import 'package:instagram_clone/feature/home/view/page/home_page.dart';
+import 'package:instagram_clone/feature/profile/view/page/profile_page.dart';
 
 void main() {
   runApp(const InstagramClone());
@@ -23,7 +24,7 @@ class InstagramClone extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginPage(),
+      home: ProfilePage(),
     );
   }
 }

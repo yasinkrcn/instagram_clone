@@ -19,15 +19,51 @@ class PostCard extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children:  [
-                const CircleAvatar(
-                  radius: 19,
-                  backgroundColor: Colors.red,
-                  child: CircleAvatar(
-                    radius: 17,
-                    backgroundColor: Colors.white,
-                    child: CircleAvatar(
-                      radius: 15,
+              children: [
+                Container(
+                  height: 38,
+                  width: 38,
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    gradient: LinearGradient(
+                      begin: Alignment.topRight,
+                      end: Alignment.bottomLeft,
+                      stops: [0.1, 0.4, 0.8],
+                      colors: [
+                        Color(0xff8A3BEE),
+                        Color(0xffF200B7),
+                        Color(0xffFE9402)
+                      ],
+                    ),
+                  ),
+                  child: Center(
+                    child: Container(
+                      height: 35,
+                      width: 35,
+                      decoration: const BoxDecoration(
+                          color: Colors.white, shape: BoxShape.circle),
+                      child: Center(
+                        child: Container(
+                          height: 32,
+                          width: 32,
+                          decoration: const BoxDecoration(
+                              color: Colors.red, shape: BoxShape.circle),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(50),
+                            child: CachedNetworkImage(
+                              key: UniqueKey(),
+                              fit: BoxFit.cover,
+                              imageUrl:
+                                  'https://im.haberturk.com/2020/01/21/ver1579609681/2560694_810x458.jpg',
+                              placeholder: (context, url) =>
+                                  const CircularProgressIndicator(),
+                              errorWidget: (context, url, error) =>
+                                  const Center(
+                                      child: Icon(Icons.error_outline)),
+                            ),
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                 ),
@@ -41,15 +77,10 @@ class PostCard extends StatelessWidget {
           ),
           CachedNetworkImage(
             key: UniqueKey(),
-
-            // height: 200,
-            // width: double.infinity,
-
             fit: BoxFit.cover,
             imageUrl:
                 'https://images.hola.com/imagenes/belleza/actualidad/20190604143274/barbara-palvin-cambio-look-flequillo/0-687-44/barbara-palvin-t.jpg',
             placeholder: (context, url) => const CircularProgressIndicator(),
-
             errorWidget: (context, url, error) =>
                 const Center(child: Icon(Icons.error_outline)),
           ),
@@ -62,7 +93,7 @@ class PostCard extends StatelessWidget {
                   SvgPicture.asset(AssetsPath().heartSVG),
                   SvgPicture.asset(AssetsPath().commentSVG),
                   SvgPicture.asset(AssetsPath().sendSVG),
-                   SizedBox(
+                  SizedBox(
                     width: ScreenSize().getWidthPercent(.52),
                   ),
                   SvgPicture.asset(AssetsPath().saveSVG),

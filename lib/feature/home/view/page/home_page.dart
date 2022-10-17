@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:instagram_clone/core/constants/assets_paths.dart';
 import 'package:instagram_clone/core/utils/screen_size.dart';
 import 'package:instagram_clone/feature/home/view/widgets/post_card.dart';
+import 'package:instagram_clone/feature/home/view/widgets/story_card.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -46,29 +47,7 @@ class HomePage extends StatelessWidget {
                   width: double.infinity,
                   child: ListView.builder(
                     itemBuilder: (context, index) {
-                      return Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 8, vertical: 4),
-                        child: Column(
-                          children: const [
-                            CircleAvatar(
-                              radius: 36,
-                              backgroundColor: Colors.red,
-                              child: CircleAvatar(
-                                radius: 34,
-                                backgroundColor: Colors.white,
-                                child: CircleAvatar(
-                                  radius: 32,
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 4,
-                            ),
-                            Text('data')
-                          ],
-                        ),
-                      );
+                      return StoryCard();
                     },
                     scrollDirection: Axis.horizontal,
                     itemCount: 10,
@@ -82,7 +61,6 @@ class HomePage extends StatelessWidget {
                 SizedBox(
                   height: ScreenSize().getHeightPercent(.7155),
                   child: ListView.builder(
-                    
                     itemBuilder: (context, index) {
                       return const PostCard();
                     },
@@ -97,3 +75,5 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
+

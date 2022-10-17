@@ -70,7 +70,11 @@ class LoginPage extends StatelessWidget {
               child: TextFormField(
                 controller: TextEditingController(),
                 textAlignVertical: TextAlignVertical.center,
-                decoration: const InputDecoration(
+                decoration:  InputDecoration(
+
+                  suffix: SvgPicture.asset(AssetsPath().obscureSVG,),
+
+                
                   hintText: 'Password',
                   hintStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
                   filled: true,
@@ -142,7 +146,7 @@ class LoginPage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SvgPicture.asset(AssetsPath().addSVG),
+                SvgPicture.asset(AssetsPath().facebookSVG, color: Colors.blue,),
 
                 //TODO: add facebook logo
                 const SizedBox(
@@ -156,13 +160,13 @@ class LoginPage extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: ScreenSize().getHeightPercent(.115),
+              height: ScreenSize().getHeightPercent(.12),
             ),
             const Divider(
               thickness: 1.3,
             ),
             const SizedBox(
-              height: 8,
+              height: 4,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

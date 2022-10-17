@@ -35,7 +35,7 @@ class LoginPage extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: ScreenSize().getHeightPercent(.165),
+              height: ScreenSize().getHeightPercent(.16),
             ),
             SvgPicture.asset(AssetsPath().logoSVG,
                 height: ScreenSize().getHeightPercent(.08)),
@@ -47,9 +47,12 @@ class LoginPage extends StatelessWidget {
               height: 48,
               child: TextFormField(
                 controller: TextEditingController(),
-                textAlignVertical: TextAlignVertical.bottom,
+                textAlignVertical: TextAlignVertical.center,
                 decoration: const InputDecoration(
                   hintText: 'Phone number, email or username',
+
+                  hintStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                  
                   filled: true,
                   border: OutlineInputBorder(),
                 ),
@@ -66,9 +69,10 @@ class LoginPage extends StatelessWidget {
               height: 48,
               child: TextFormField(
                 controller: TextEditingController(),
-                textAlignVertical: TextAlignVertical.bottom,
+                textAlignVertical: TextAlignVertical.center,
                 decoration: const InputDecoration(
                   hintText: 'Password',
+                  hintStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
                   filled: true,
                   border: OutlineInputBorder(),
                 ),

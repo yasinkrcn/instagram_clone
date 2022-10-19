@@ -269,13 +269,13 @@ class ProfilePage extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(top: 1),
                         child: SizedBox(
-                          height: ScreenSize().getHeightPercent(.3965),
+                          height: ScreenSize().getHeightPercent(.31),
                           width: 500,
                           child: TabBarView(children: [
                             Column(
                               children: [
                                 SizedBox(
-                                  height: ScreenSize().getHeightPercent(.3965),
+                                  height: ScreenSize().getHeightPercent(.31),
                                   width: 500,
                                   child: GridView.builder(
                                     itemCount: 7,

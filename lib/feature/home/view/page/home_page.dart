@@ -30,7 +30,7 @@ class HomePage extends StatelessWidget {
                     width: 60,
                   ),
                   SvgPicture.asset(
-                    AssetsPath().searchSVG,
+                    AssetsPath().deactiveSearchSVG,
                     height: 22,
                   ),
                   SvgPicture.asset(AssetsPath().heartSVG),
@@ -59,7 +59,7 @@ class HomePage extends StatelessWidget {
                   thickness: 0.25,
                 ),
                 SizedBox(
-                  height: ScreenSize().getHeightPercent(.7155),
+                  height: ScreenSize().getHeightPercent(.63),
                   child: ListView.builder(
                     itemBuilder: (context, index) {
                       return const PostCard();

@@ -46,21 +46,7 @@ extension BottomNavigationBarStateExtension on BottomNavigationBarState {
 
 
 
-  String stateToTitle() {
-    switch (this) {
-      case BottomNavigationBarState.HOME:
-        return 'Home';
-      case BottomNavigationBarState.SEARCH:
-        return 'Search';
-      case BottomNavigationBarState.REELS:
-        return 'Reels';
-      case BottomNavigationBarState.SHOP:
-        return 'Shop';
 
-      case BottomNavigationBarState.PROFILE:
-        return 'Profile';
-    }
-  }
 
   String stateToDeactiveAssetPath() {
     switch (this) {

@@ -1,7 +1,7 @@
 # instagram_clone
 
 This project is developing...
-It's desired to make a clone of the Instagram application.
+A clone of the Instagram application will be made.
 You can see some of the finished pieces below.
 
 ## Developed Screens

@@ -3,6 +3,7 @@
 This project is developing...
 A clone of the Instagram application will be made.
 You can see some of the finished pieces below.
+Flutter version 3.3.1 used.
 
 ## Developed Screens
 

@@ -4,6 +4,7 @@ import 'package:instagram_clone/feature/auth/view/pages/create_account_page.dart
 import 'package:instagram_clone/feature/auth/view/pages/login_page.dart';
 import 'package:instagram_clone/feature/auth/view/pages/start_page.dart';
 import 'package:instagram_clone/feature/home/view/page/home_page.dart';
+import 'package:instagram_clone/feature/profile/view/page/posts_page.dart';
 import 'package:instagram_clone/feature/profile/view/page/profile_page.dart';
 import 'package:instagram_clone/feature/reels/view/page/reels_page.dart';
 import 'package:instagram_clone/feature/search/view/page/search_page.dart';
@@ -18,6 +19,7 @@ class PageRoutes {
   static const String searchPage = "/searchPage";
   static const String shopPage = "/shopPage";
   static const String reelsPage = "/reelsPage";
+  static const String postsPage = "/postsPage";
 }
 
 Route<dynamic> generateRoute(RouteSettings settings) {
@@ -39,6 +41,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return CupertinoPageRoute(builder: (_) => const ShopPage());
     case PageRoutes.reelsPage:
       return CupertinoPageRoute(builder: (_) => const ReelsPage());
+    case PageRoutes.postsPage:
+      return CupertinoPageRoute(builder: (_) => const PostsPage());
 
     default:
       return CupertinoPageRoute(builder: (_) => const StartPage());

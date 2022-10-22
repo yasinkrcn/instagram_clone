@@ -9,8 +9,11 @@ class StoryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+      padding: const EdgeInsets.only( bottom: 4,
+                left: 8,
+                right: 8,),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Container(
             height: 72,
@@ -58,10 +61,8 @@ class StoryCard extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(
-            height: 3,
-          ),
-          const Text('data')
+         
+          const Text('data',style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400),)
         ],
       ),
     );

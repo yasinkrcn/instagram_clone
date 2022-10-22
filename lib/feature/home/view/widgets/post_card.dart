@@ -126,10 +126,26 @@ class PostCard extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: Row(
                   children: [
-                    const CircleAvatar(
-                      radius: 14,
-                      backgroundColor: Colors.blueAccent,
-                    ),
+                     Container(
+                          height: 28,
+                          width: 28,
+                          decoration: const BoxDecoration(
+                              color: Colors.red, shape: BoxShape.circle),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(50),
+                            child: CachedNetworkImage(
+                              key: UniqueKey(),
+                              fit: BoxFit.cover,
+                              imageUrl:
+                                  'https://i.pinimg.com/originals/19/a7/48/19a748a0fe255f082318a3b4b5dac78f.jpg',
+                              placeholder: (context, url) =>
+                                  const CircularProgressIndicator(),
+                              errorWidget: (context, url, error) =>
+                                  const Center(
+                                      child: Icon(Icons.error_outline)),
+                            ),
+                          ),
+                        ),
                     const SizedBox(
                       width: 4,
                     ),

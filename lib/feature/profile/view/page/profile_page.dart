@@ -2,6 +2,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:instagram_clone/core/constants/assets_paths.dart';
+import 'package:instagram_clone/core/utils/route/route_manager.dart';
+import 'package:instagram_clone/core/utils/route/router.dart';
 import 'package:instagram_clone/core/utils/screen_size.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -287,22 +289,27 @@ class ProfilePage extends StatelessWidget {
                                             childAspectRatio: 1,
                                             mainAxisSpacing: 1),
                                     itemBuilder: (context, index) {
-                                      return CachedNetworkImage(
-                                        key: UniqueKey(),
+                                      return GestureDetector(
+                                        onTap: () => Go.to.page(
+                                          PageRoutes.postsPage,
+                                        ),
+                                        child: CachedNetworkImage(
+                                          key: UniqueKey(),
 
-                                        // height: 200,
-                                        // width: double.infinity,
+                                          // height: 200,
+                                          // width: double.infinity,
 
-                                        fit: BoxFit.cover,
-                                        imageUrl:
-                                            'https://images.hola.com/imagenes/belleza/actualidad/20190604143274/barbara-palvin-cambio-look-flequillo/0-687-44/barbara-palvin-t.jpg',
-                                        placeholder: (context, url) =>
-                                            const CircularProgressIndicator(),
+                                          fit: BoxFit.cover,
+                                          imageUrl:
+                                              'https://images.hola.com/imagenes/belleza/actualidad/20190604143274/barbara-palvin-cambio-look-flequillo/0-687-44/barbara-palvin-t.jpg',
+                                          placeholder: (context, url) =>
+                                              const CircularProgressIndicator(),
 
-                                        errorWidget: (context, url, error) =>
-                                            const Center(
-                                                child:
-                                                    Icon(Icons.error_outline)),
+                                          errorWidget: (context, url, error) =>
+                                              const Center(
+                                                  child: Icon(
+                                                      Icons.error_outline)),
+                                        ),
                                       );
                                     },
                                   ),

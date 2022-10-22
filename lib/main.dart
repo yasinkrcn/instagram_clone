@@ -1,4 +1,5 @@
 import 'package:instagram_clone/core/constants/main_provider_list%20copy.dart';
+import 'package:instagram_clone/feature/profile/view/page/posts_page.dart';
 import 'package:provider/provider.dart';
 
 import '/core/init/injection_container.dart' as locator;
@@ -13,15 +14,14 @@ import 'package:instagram_clone/feature/profile/view/page/profile_page.dart';
 
 import 'feature/bottom_navigation_bar/view/page/bottom_navigation_page.dart';
 
-void main()async {
-    await locator.init();
+void main() async {
+  await locator.init();
   runApp(
-    
     MultiProvider(
-
       providers: MainProviderList.getMainProviderList(),
-      
-      child: const InstagramClone()));
+      child: const InstagramClone(),
+    ),
+  );
 }
 
 class InstagramClone extends StatelessWidget {

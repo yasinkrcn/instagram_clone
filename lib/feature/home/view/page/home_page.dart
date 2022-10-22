@@ -6,6 +6,7 @@ import 'package:instagram_clone/core/utils/screen_size.dart';
 import 'package:instagram_clone/feature/home/view/widgets/post_card.dart';
 import 'package:instagram_clone/feature/home/view/widgets/stories_card.dart';
 import 'package:instagram_clone/feature/home/view/widgets/story_card.dart';
+import 'package:instagram_clone/feature/search/view/page/search_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -46,15 +47,16 @@ class HomePage extends StatelessWidget {
           toolbarHeight: 55,
         ),
         body: ListView.builder(
+          itemCount: discover.length + 1,
           itemBuilder: (context, index) {
             if (index == 0) {
               return const Stories();
             }
 
-            return const PostCard();
+            return PostCard(
+              image: discover[index - 1],
+            );
           },
         ));
   }
 }
-
-

@@ -44,4 +44,13 @@ class AssetsPath {
       'assets/svg/bottom_nav_bar/deactive/deactive_shop.svg';
   final String deactiveProfileSVG =
       'assets/svg/bottom_nav_bar/deactive/deactive_profile.svg';
+
+  //SHOP
+  final String shop1PNG = 'assets/png/shop/shopping1.png';
+  final String shop2PNG = 'assets/png/shop/shopping2.png';
+  final String shop3PNG = 'assets/png/shop/shopping3.png';
+  final String shop4PNG = 'assets/png/shop/shopping4.png';
+  final String shop5PNG = 'assets/png/shop/shopping5.png';
+  final String shop6PNG = 'assets/png/shop/shopping6.png';
+  final String shop7PNG = 'assets/png/shop/shopping7.png';
 }

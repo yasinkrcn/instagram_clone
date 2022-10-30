@@ -5,6 +5,7 @@ import 'package:instagram_clone/core/constants/assets_paths.dart';
 import 'package:instagram_clone/core/utils/route/route_manager.dart';
 import 'package:instagram_clone/core/utils/route/router.dart';
 import 'package:instagram_clone/core/utils/screen_size.dart';
+import 'package:instagram_clone/feature/search/view/page/search_page.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -137,107 +138,66 @@ class ProfilePage extends StatelessWidget {
                         const SizedBox(
                           height: 16,
                         ),
-                        Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(right: 16),
-                              child: Column(
-                                children: const [
-                                  CircleAvatar(
-                                    radius: 32,
-                                    backgroundColor: Colors.black,
-                                    child: CircleAvatar(
-                                      radius: 31,
-                                      backgroundColor: Colors.white,
+                        SizedBox(
+                          height: 87,
+                          width: double.infinity,
+                          child: ListView.builder(
+                            scrollDirection: Axis.horizontal,
+                            itemCount: 4,
+                            itemBuilder: (context, index) {
+                              if (index == 3) {
+                                return Column(
+                                  children: const [
+                                    CircleAvatar(
+                                      radius: 32,
+                                      backgroundColor: Colors.black,
                                       child: CircleAvatar(
-                                          radius: 29,
-                                          backgroundColor: Colors.white,
-                                          foregroundImage: NetworkImage(
-                                              'https://i.pinimg.com/originals/19/a7/48/19a748a0fe255f082318a3b4b5dac78f.jpg')),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 4,
-                                  ),
-                                  Text('life')
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(right: 16),
-                              child: Column(
-                                children: const [
-                                  CircleAvatar(
-                                    radius: 32,
-                                    backgroundColor: Colors.black,
-                                    child: CircleAvatar(
-                                      radius: 31,
-                                      backgroundColor: Colors.white,
-                                      child: CircleAvatar(
-                                          radius: 29,
-                                          backgroundColor: Colors.white,
-                                          foregroundImage: NetworkImage(
-                                              'https://i.pinimg.com/originals/19/a7/48/19a748a0fe255f082318a3b4b5dac78f.jpg')),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 4,
-                                  ),
-                                  Text('is')
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(right: 16),
-                              child: Column(
-                                children: const [
-                                  CircleAvatar(
-                                    radius: 32,
-                                    backgroundColor: Colors.black,
-                                    child: CircleAvatar(
-                                      radius: 31,
-                                      backgroundColor: Colors.white,
-                                      child: CircleAvatar(
-                                          radius: 29,
-                                          backgroundColor: Colors.white,
-                                          foregroundImage: NetworkImage(
-                                              'https://i.pinimg.com/originals/19/a7/48/19a748a0fe255f082318a3b4b5dac78f.jpg')),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 4,
-                                  ),
-                                  Text('short')
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(right: 16),
-                              child: Column(
-                                children: const [
-                                  CircleAvatar(
-                                    radius: 32,
-                                    backgroundColor: Colors.black,
-                                    child: CircleAvatar(
-                                      radius: 31,
-                                      backgroundColor: Colors.white,
-                                      child: Center(
-                                        child: Icon(
-                                          Icons.add,
-                                          size: 32,
-                                          color: Colors.black,
+                                        radius: 31,
+                                        backgroundColor: Colors.white,
+                                        child: Center(
+                                          child: Icon(
+                                            Icons.add,
+                                            size: 32,
+                                            color: Colors.black,
+                                          ),
                                         ),
                                       ),
                                     ),
-                                  ),
-                                  SizedBox(
-                                    height: 4,
-                                  ),
-                                  Text('New')
-                                ],
-                              ),
-                            ),
-                          ],
+                                    SizedBox(
+                                      height: 4,
+                                    ),
+                                    Text('New')
+                                  ],
+                                );
+                              }
+
+                              return Padding(
+                                padding: const EdgeInsets.only(right: 12),
+                                child: Column(
+                                  children: [
+                                    CircleAvatar(
+                                      radius: 32,
+                                      backgroundColor: Colors.black,
+                                      child: CircleAvatar(
+                                        radius: 31,
+                                        backgroundColor: Colors.white,
+                                        child: CircleAvatar(
+                                          radius: 29,
+                                          backgroundColor: Colors.white,
+                                          foregroundImage:
+                                              NetworkImage(discover[index]),
+                                        ),
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      height: 4,
+                                    ),
+                                    const Text('life')
+                                  ],
+                                ),
+                              );
+                            },
+                          ),
                         ),
                       ],
                     ),
@@ -271,13 +231,13 @@ class ProfilePage extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(top: 1),
                         child: SizedBox(
-                          height: ScreenSize().getHeightPercent(.31),
+                          height: ScreenSize().getHeightPercent(.328),
                           width: 500,
                           child: TabBarView(children: [
                             Column(
                               children: [
                                 SizedBox(
-                                  height: ScreenSize().getHeightPercent(.31),
+                                  height: ScreenSize().getHeightPercent(.328),
                                   width: 500,
                                   child: GridView.builder(
                                     itemCount: 7,
@@ -319,7 +279,7 @@ class ProfilePage extends StatelessWidget {
                             Column(
                               children: [
                                 SizedBox(
-                                  height: ScreenSize().getHeightPercent(.3965),
+                                  height: ScreenSize().getHeightPercent(.328),
                                   width: 500,
                                   child: GridView.builder(
                                     itemCount: 7,
@@ -333,16 +293,11 @@ class ProfilePage extends StatelessWidget {
                                     itemBuilder: (context, index) {
                                       return CachedNetworkImage(
                                         key: UniqueKey(),
-
-                                        // height: 200,
-                                        // width: double.infinity,
-
                                         fit: BoxFit.cover,
                                         imageUrl:
                                             'https://images.hola.com/imagenes/belleza/actualidad/20190604143274/barbara-palvin-cambio-look-flequillo/0-687-44/barbara-palvin-t.jpg',
                                         placeholder: (context, url) =>
                                             const CircularProgressIndicator(),
-
                                         errorWidget: (context, url, error) =>
                                             const Center(
                                                 child:
@@ -358,7 +313,7 @@ class ProfilePage extends StatelessWidget {
                       )
                     ],
                   ),
-                )
+                ),
               ],
             )
           ],

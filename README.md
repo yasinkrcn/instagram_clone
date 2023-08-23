@@ -1,11 +1,8 @@
 # instagram_clone
 
-This project is developing...
-A clone of the Instagram application will be made.
-You can see some of the finished pieces below.
-Flutter version 3.3.1 used.
+Instagram UI Clone
 
-## Developed Screens
+## Screens
 
 <img src='https://user-images.githubusercontent.com/57758337/196930156-c5813bbc-42b6-49fe-8b89-bad3d3cc8e45.png' height="600" width="337"></img>
 <img src='https://user-images.githubusercontent.com/57758337/196930169-79ad1845-498c-450d-a995-19098745f029.png' height="600" width="337"></img>

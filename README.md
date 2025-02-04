@@ -16,9 +16,9 @@ A Flutter-based UI clone of Instagram. This project replicates the Instagram int
 |------------|------------|------------|
 | <img src='https://user-images.githubusercontent.com/57758337/198905384-d7e35d43-eeee-4be8-ace1-e50233fc6cef.png' width="300" /> | <img src='https://user-images.githubusercontent.com/57758337/198905386-3029da80-fad0-49f0-9dee-ab2fcb42fbb7.png' width="300" /> | <img src='https://user-images.githubusercontent.com/57758337/198905341-38af1fd0-49f9-41fa-90fd-e0f2525ab530.png' width="300" /> |
 
-| Shop | Search | More Screens |
+| Shop |
 |------------|------------|------------|
-| <img src='https://user-images.githubusercontent.com/57758337/197356167-75de9b46-b6ed-4554-8fe2-77b14ac5a4ac.png' width="300" /> | <img src='https://user-images.githubusercontent.com/57758337/201322912-c309728e-52f4-45ac-b98d-1421fbf203af.png' width="300" /> | <img src='https://user-images.githubusercontent.com/57758337/201322901-c112878c-7dc3-4f77-99a9-8d4954e5827e.png' width="300" /> |
+| <img src='https://user-images.githubusercontent.com/57758337/197356167-75de9b46-b6ed-4554-8fe2-77b14ac5a4ac.png' width="300" /> |
 
 ## 🚀 Features
 - 📸 Instagram-like UI
